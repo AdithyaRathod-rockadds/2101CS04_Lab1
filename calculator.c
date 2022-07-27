@@ -5,6 +5,7 @@ float add(float a, float b)
 {
     return a+b;
 }
+
 //for substraction
 float substract(float a, float b)
 {
@@ -41,17 +42,25 @@ int main()
     switch (operator)
     {
         case '+':
+            printf("The operation is addition");
             printf("The Result is %f", add(a,b));
             break;
+
         case '-':
+            printf("The operation is substration");
             printf("The Result is %f", substract(a,b));
             break;
+            
         case '*':
+            printf("The operation is multiplication");
             printf("The Result is %f", multiply(a,b));
             break;
+
         case '/':
+            printf("The operation is division");
             printf("The Result is %f", divide(a,b));
             break;
+
         default:
             printf("wrong operatar detected!!");
             break;
