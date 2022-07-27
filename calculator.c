@@ -1,3 +1,5 @@
+//generating a C calculator which performs basic arithmetic operations of +, -, *, /
+
 #include<stdio.h>
 
 //for adddition
