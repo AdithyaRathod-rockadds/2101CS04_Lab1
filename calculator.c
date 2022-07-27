@@ -10,11 +10,13 @@ float substract(float a, float b)
 {
     return a-b;
 }
+
 //for multiplication
 float multiply(float a, float b)
 {
     return a*b;
 }
+
 //for division
 float divide(float a, float b)
 {
