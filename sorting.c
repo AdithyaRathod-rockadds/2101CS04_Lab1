@@ -173,6 +173,7 @@ void print_array(int arr[], int n)
     }
 }
 
+//main function
 int main()
 { 
 
@@ -195,7 +196,7 @@ int main()
     // merge_sort(arr, n);
 
     quicksort(arr, n);
-    
+
     //after
     printf("The array after sorting is:\n");
     print_array(arr, n);
