@@ -18,25 +18,42 @@
 
 // }
 
-void selection_sort(int arr[], int n)
-{  
-    int k=0;
-    while(k<n)
-    {
-        int small=k;
-        for (int i=k+1; i<n; i++)
-        {
-            if(arr[small]>arr[i])
-            {
-                small=i;
-            }
-        }
-        int temp=arr[small];
-        arr[small]=arr[k];
-        arr[k]=temp;
+// void selection_sort(int arr[], int n)
+// {  
+//     int k=0;
+//     while(k<n)
+//     {
+//         int small=k;
+//         for (int i=k+1; i<n; i++)
+//         {
+//             if(arr[small]>arr[i])
+//             {
+//                 small=i;
+//             }
+//         }
+//         int temp=arr[small];
+//         arr[small]=arr[k];
+//         arr[k]=temp;
 
-        k++;
-    }    
+//         k++;
+//     }    
+// }
+
+void insertion_sort(int arr[], int n)
+{  
+    for (int i=1; i<n; i++)
+    {
+        int current= arr[i];
+        int j=i-1;
+        while(arr[j]>current && j>=0)
+        {
+            arr[j+1]=arr[j];
+            j--;
+        }
+        arr[j+1]=current;
+    }
+
+
 }
 
 void print_array(int arr[], int n)
@@ -62,7 +79,10 @@ int main()
 
     //bubble_sort(arr, n);
 
-    selection_sort(arr, n); //sorting method
+    // selection_sort(arr, n);
+
+    insertion_sort(arr, n);
+
 
     //after
     printf("The array after sorting is:\n");
