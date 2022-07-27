@@ -17,7 +17,6 @@
 //             }
 //         }
 //     }
-
 // }
 
 // void selection_sort(int arr[], int n)
@@ -36,7 +35,6 @@
 //         int temp=arr[small];
 //         arr[small]=arr[k];
 //         arr[k]=temp;
-
 //         k++;
 //     }    
 // }
@@ -68,11 +66,8 @@
 //   if (l < r)
 //   {
 //     int m = l + (r - l) / 2;
-  
 //     merge_sort_recursion(a, l, m);
 //     merge_sort_recursion(a, m + 1, r);
-  
-    
 //     merge_sorted_arrays(a, l, m, r);
 //   }
 // }
@@ -82,22 +77,13 @@
 // {
 //   int left_length = m - l + 1;
 //   int right_length = r - m;
-  
 //   int temp_left[left_length];
-//   int temp_right[right_length];
-  
-  
+//   int temp_right[right_length]; 
 //   int i, j, k;
-  
-  
 //   for (int i = 0; i < left_length; i++)
-//     temp_left[i] = a[l + i];
-  
-  
+//     temp_left[i] = a[l + i]; 
 //   for (int i = 0; i < right_length; i++)
 //     temp_right[i] = a[m + 1 + i];
-  
-  
 //   for (i = 0, j = 0, k = l; k <= r; k++)
 //   {
 //     if ((i < left_length) &&
@@ -114,7 +100,7 @@
 //   }  
 // }
 
-void swap(int *x, int *y)
+void swap(int *x, int *y)//swap 
 {
   int temp = *x;
   *x = *y;
@@ -177,7 +163,7 @@ void print_array(int arr[], int n)
 int main()
 { 
 
-    //initialization
+  //initialization
    int arr[]={2,1,5,3,4,8,7,9,6}; //array initialization
    int n=sizeof(arr)/sizeof(arr[0]); //size of array
     
