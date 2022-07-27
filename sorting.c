@@ -1,21 +1,42 @@
 #include<stdio.h>
 
-void bubble_sort(int arr[], int n)
-{
-    int k;
-    for (int i=0; i<n; i++)
+// void bubble_sort(int arr[], int n)
+// {
+//     int k;
+//     for (int i=0; i<n; i++)
+//     {
+//         for (int j=i+1; j<n; j++)
+//         {
+//             if (arr[j]<arr[i])
+//             {
+//                 k=arr[i];
+//                 arr[i]=arr[j];
+//                 arr[j]=k;
+//             }
+//         }
+//     }
+
+// }
+
+void selection_sort(int arr[], int n)
+{  
+    int k=0;
+    while(k<n)
     {
-        for (int j=i+1; j<n; j++)
+        int small=k;
+        for (int i=k+1; i<n; i++)
         {
-            if (arr[j]<arr[i])
+            if(arr[small]>arr[i])
             {
-                k=arr[i];
-                arr[i]=arr[j];
-                arr[j]=k;
+                small=i;
             }
         }
-    }
+        int temp=arr[small];
+        arr[small]=arr[k];
+        arr[k]=temp;
 
+        k++;
+    }    
 }
 
 void print_array(int arr[], int n)
@@ -25,6 +46,8 @@ void print_array(int arr[], int n)
         printf("%d, ", arr[i]);
     }
 }
+
+
 int main()
 {   
     //initialization
@@ -37,7 +60,9 @@ int main()
     print_array(arr, n);
     printf("\n");
 
-    bubble_sort(arr, n);//sorting method
+    //bubble_sort(arr, n);
+
+    selection_sort(arr, n); //sorting method
 
     //after
     printf("The array after sorting is:\n");
